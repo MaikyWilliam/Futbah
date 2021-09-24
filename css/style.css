@@ -141,12 +141,12 @@ section .foto{
 }
 
 section .foto .texto-banner{
-    width: 400px;
-    height: 100px;
+    width: 340px;
+    height: 110px;
     border: 1px solid black;
     position: relative;
-    top: 10%;
-    left: 10%;
+    top: 18%;
+    left: 5%;
     padding: 10px;
     background-color: rgba(211, 202, 202, 0.363);
 }
@@ -164,36 +164,110 @@ section .foto .texto-banner p{
 
 /******/
 
+/** TABELA**/
+/* Base da tabela */
+table {
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: arial;
+  }
 
-/**MOSAICO**/
+  .table {
+    border-bottom: #d0d5d8 solid 1px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-.mosaico-single{
-	float: left;
-	width: calc(100% / 6);
+  .table th,
+  .table td {
+    border-right: #d0d5d8 solid 1px;
+    padding: 20px 30px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .table td:last-child {
+     border-right: 0;
+  }
+
+.table tbody td{
+    font-size: 16px;
+    text-align: center;
+  }
+  .table thead th {
+    font-weight: normal;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .table tbody > tr:nth-child(odd) > td,
+  .table tbody > tr:nth-child(odd) > th {
+    background-color: #f8f8f8;
+  }
+
+/* Tornando a tabela responsiva*/
+
+/* para resoluções de até 767px */
+@media (max-width: 767px) { 
+  
+  /* Tabela responsiva */
+  .table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+/*  Tabela funcionando como um bloco  */
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+/* Defino um tamanho para as células */
+  .table-responsive td,
+  .table-responsive th {
+    height: 30px;
+  }
+  .table thead th {
+     font-size: 16px;
+  }
+  .table th,
+  .table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+/* thead é “flotado” esquerda para auxiliar na responsividade */
+  .table-responsive thead {
+    float: left;
+  }
+
+  .table-responsive tbody {
+    width: auto;
+    position: relative;
+   
+    overflow-x: auto;  /* scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Funcionamento para dispositivos touch */
+    white-space: nowrap;
+  }
+/*  Posicionando linhas lado-a-lado  */
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+
+  .table td:last-child {
+     border-right: #d0d5d8 solid 1px;
+  }
+
 }
 
-.img-mosaico-single{
-	width: 100%;
-	padding-top:100%;
-	background-color: #ccc;
-	border:5px solid white;
-	
-	background-image:url('../imagens/futebol/Foto-22-copia.JPG');
-}
-
-/****/
-
-
-
-
-
-
-
-
-
-
-
-
+/******/
 
 
 
